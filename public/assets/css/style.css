@@ -1,0 +1,149 @@
+body{
+    background: white;
+}
+
+.clearfix{
+    float:none;
+    clear:both;
+}
+
+.example-wrapper { 
+    margin: 1em auto; 
+    max-width: 800px; 
+    width: 95%; 
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code { 
+    background: #F5F5F5; 
+    padding: 2px 6px; 
+}
+
+#header{
+    margin: 1em auto; 
+    max-width: 800px; 
+    width: 95%; 
+    font: 18px/1.5 sans-serif;
+}
+
+#menu{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    background: #eee;
+    line-height: 50px;
+}
+
+#menu li {
+    display:block;
+    float:left;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#menu li.right{
+    float:right;
+    border-right: 0px;
+    border-left: 1px solid #ccc;
+}
+
+
+#menu a{
+    display:block;
+    color: #444;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+
+#menu li:hover {
+    background: #444;
+}
+
+#menu li:hover a {
+    color: white;
+}
+
+
+
+
+label{
+    display: block;
+    width: 80%;
+    margin-top:15px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select{
+    width: 70%;
+    padding: 8px;
+}
+
+button,
+input[type="submit"]{
+    padding:8px;
+    margin-top:15px;
+    background: #00AA33;
+    color: white;
+    border: 1px solid #047425;
+    cursor:pointer;
+    transition: all 300ms;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    background: #047425;
+}
+
+table{
+    width:100%;
+}
+
+table th,
+table td{
+    background: #f6f6f6;
+    padding: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+table td{
+    background: #e9ffea;
+}
+
+.buttons a{
+    text-decoration: none;
+    border: 1px solid green;
+    padding: 10px;
+    color: white;
+    background: #00AA33;
+}
+
+.buttons{
+    width: 33%;
+}
+
+.buttons .btn-edit{
+    background: orange;
+    border-color: #f38b06;
+}
+
+.buttons .btn-delete{
+    background: red;
+    border-color: #b90808;
+}
+
+.data-task{
+    color:gray;
+}

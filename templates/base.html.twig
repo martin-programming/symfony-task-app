@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('assets/css/style.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}
+            <div id="header">
+                <h1>Tareas Symfony</h1>
+                <ul id="menu">
+                    {% if app.user %}
+                        <li><a href="{{ path('tasks') }}">Inicio</a></li>
+                        <li><a href="{{ path('my_tasks') }}">Mis tareas</a></li>
+                        <li><a href="{{ path('task_creation') }}">Crear tarea</a></li>
+                        
+                        <li class="right"><a href="{{ path('logout') }}">Cerrar sesión</a></li>
+                        <li class="right"><a href="">{{ app.user.name ~ ' ' ~ app.user.surname }}</a></li>
+                    {% else %}
+                        <li><a href="{{ path('login') }}">Login</a></li>
+                        <li><a href="{{ path('register') }}">Registro</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="clearfix"></div>   
+        {% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
